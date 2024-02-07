@@ -1,7 +1,6 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import '../styles/global.css';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
 const pageTitle = "Sobre mi";
 
 const identity = {
@@ -25,19 +24,13 @@ const happy = true;
 const finished = false;
 const goal = 3;
 
-const skillcolor = "navy" 
-const skillfont = "bold"
-const skilltransform = "scale2d()"
+const skillcolor = "navy";
+const skillfont = "bold";
+const skilltransform = "scale2d()";
 ---
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-</head>
-<body>
-    <Navigation/>
-    <h1>{pageTitle} persona</h1>
+<BaseLayout pageTitle={pageTitle}>
+    <h2>Mi impresionante subtítulo del blog</h2>
     <h2>... ¡y mi nuevo sitio Astro!</h2>
 
     <p>
@@ -74,18 +67,17 @@ const skilltransform = "scale2d()"
     {happy && <p>Estoy Feliz de aprender Astro</p>}
     {finished && <p>He terminado este tutorial</p>}
     {goal === 3 ? <p>My objetivo es terminar en 3 dias</p> : <p>Mi objetivo no son 3 dias</p>}
-    <Footer />
+</BaseLayout>
 
-    <style is:global define:vars={{skillcolor,skillfont,skilltransform}}>
-        h1{
-            color: purple;
-            font-size: 4rem;
-        }
-        
-        .skills{
-            color: var(--skillcolor);   
-            font-weight: var(--skillfont);
-            transform: var(--skilltransform);
-        }
-    </style>
-</body>
+<style is:global define:vars={{ skillcolor, skillfont, skilltransform }}>
+    h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+
+    .skills {
+        color: var(--skillcolor);
+        font-weight: var(--skillfont);
+        transform: var(--skilltransform);
+    }
+</style>
