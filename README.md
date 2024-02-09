@@ -1,54 +1,82 @@
-# Astro Starter Kit: Basics
+# Bienvenido a mi Blog con Astro 🚀
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Hola! Soy Katia, una desarrolladora entusiasta que acaba de crear un blog utilizando Astro. Este proyecto ha sido emocionante de construir, y estoy encantada de compartirlo contigo.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🏝️ Arquitectura de Islas con Astro
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Una de las características más interesantes de este proyecto es la arquitectura de islas utilizada por Astro. Esta arquitectura permite dividir la aplicación en componentes independientes y autónomos, lo que facilita su mantenimiento y escalabilidad. Cada página, componente y recurso se considera una "isla" dentro del proyecto, lo que proporciona un enfoque organizado y modular para el desarrollo.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 📚 Estructura del Proyecto
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Aquí tienes un vistazo a la estructura del proyecto:
 
 ```text
 /
 ├── public/
+│   ├── Background.png
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├──Card.astro
+│   │   ├──BlogPost.astro
+│   │   ├──Footer.astro
+│   │   ├──Greeting.jsx
+│   │   ├──Hamburguer.astro
+│   │   ├──Header.astro
+│   │   ├──Navigation.astro
+│   │   ├──Social.astro
+│   │   └──ThemeIcon.astro
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   ├──BaseLayout.astro
+│   │   ├──Layout.astro
+│   │   ├──MarkdownLayout.astro
+│   │   └──MarkdownPostLayout.astro
 │   └── pages/
-│       └── index.astro
+│       ├── posts/
+│       │   ├── learning-astro.astro
+│       │   ├── post-1.astro
+│       │   ├── post-2.astro
+│       │   ├── post-3.astro
+│       │   └── post-4.astro
+│       ├── tags/
+│       │   ├── [tag].astro
+│       │   └── index.astro
+│       ├── about.astro
+│       ├── blog.astro
+│       ├── index.astro
+│       └── rss.xml.js
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+En el directorio `src/pages/`, encontrarás las diferentes páginas de mi blog, cada una representada por un archivo `.astro` o `.md`. Además, en `src/components/` están los componentes (piezas de código reutilizables) que he creado para mi aplicación.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+>[!IMPORTANT]
+>Todos los componentes en este proyecto están **designados en MAYÚSCULAS** para diferenciarlos claramente de los elementos HTML estándar. Esta convención ayuda a mantener un código más legible y organizado, facilitando la identificación y el uso de los componentes en todo el proyecto.
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## 📝 Páginas Disponibles
 
-All commands are run from the root of the project, from a terminal:
+Mi blog cuenta con una variedad de páginas para explorar:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Inicio**: `src/pages/index.astro` - La página principal de mi blog.
+- **Acerca de**: `src/pages/about.astro` - Aquí puedes conocer un poco más sobre mí o sobre el blog.
+- **Blog**: 
+  - `src/pages/blog/index.astro` - Una lista de todas las entradas de mi blog.
+  - `src/pages/blog/[slug].astro` - Detalles de una entrada de blog individual.
+  - `src/pages/blog/tags.astro` - Explora las diferentes etiquetas de las entradas de mi blog.
+- **Etiquetas**: `src/pages/blog/tags.astro` - Una página para explorar todas las etiquetas disponibles en mi blog.
 
-## 👀 Want to learn more?
+## 🚀 Comandos Útiles
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Estos son algunos de los comandos que puedes ejecutar para trabajar con mi blog:
+
+```sh
+npm install          # Instala las dependencias
+npm run dev          # Inicia el servidor de desarrollo local
+npm run build        # Construye la aplicación para producción
+npm run preview      # Previsualiza la construcción local antes de desplegar
+npm run astro ...    # Ejecuta comandos de la CLI de Astro
+npm run astro -- --help # Obtén ayuda utilizando la CLI de Astro
+```
+
+¡Gracias por visitar mi blog y espero que disfrutes explorándolo!
