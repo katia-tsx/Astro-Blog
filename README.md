@@ -76,10 +76,10 @@ Mi blog cuenta con una variedad de páginas para explorar:
   ![Imagen de la página de Etiquetas](/public/etiquetas.png)  
   Explora todas las etiquetas disponibles en mi blog y encuentra contenido relacionado.
 
-  > [!NOTE]  
-  > Para ocultar la barra de herramientas de desarrollo de Astro, ejecuta el siguiente comando en tu terminal:  
-  ```
-  sh astro preferences disable devToolbar
+  >[!NOTE]  
+  >Para ocultar la barra de herramientas de desarrollo de Astro, ejecuta el siguiente comando en tu terminal:  
+  ```sh 
+  astro preferences disable devToolbar
 
 ## 🚀 Comandos Útiles
 
