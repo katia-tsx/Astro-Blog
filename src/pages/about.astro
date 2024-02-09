@@ -27,9 +27,10 @@ const goal = 3;
 const skillcolor = "navy";
 const skillfont = "bold";
 const skilltransform = "scale2d()";
----
-
-<BaseLayout pageTitle={pageTitle}>
+--- 
+<BaseLayout >
+    <main>  
+        <h1>{pageTitle}</h2>
     <h2>Mi impresionante subtítulo del blog</h2>
     <h2>... ¡y mi nuevo sitio Astro!</h2>
 
@@ -67,7 +68,9 @@ const skilltransform = "scale2d()";
     {happy && <p>Estoy Feliz de aprender Astro</p>}
     {finished && <p>He terminado este tutorial</p>}
     {goal === 3 ? <p>My objetivo es terminar en 3 dias</p> : <p>Mi objetivo no son 3 dias</p>}
+</main>
 </BaseLayout>
+
 
 <style is:global define:vars={{ skillcolor, skillfont, skilltransform }}>
     h1 {

@@ -3,38 +3,61 @@ import BaseLayout from './BaseLayout.astro';
 import '../styles/global.css'
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
-  <p>{frontmatter.pubDate.slice(0,10)}</p>
+<BaseLayout>
+  <main>
+  <section class="float-left w-[75%]">
+    <div class="row">
+      <aside class="p-[20px] mt-[20px]">
+        <h2 class="text-4xl font-extrabold text-violet-700">{frontmatter.title}</h2>
+        <h5><strong>{frontmatter.author}</strong>, {frontmatter.pubDate.slice(0,10)}</h5>
+        <picture class="h-[100%] w-[100%] p-[20%]">
+          <img src={frontmatter.image.url} alt={frontmatter.image.alt} srcset="">
+        </picture>
+        {frontmatter.texto.map((texto: string) => (
+          <p>{texto}</p>
+        ))}
+      </aside>
+    </div>
+  </section>
+  
+  <section class="float-left w-[25%] p-[20px]">
+    <div class="p-[20px] mt-[20px]">
+      <h2>Sobre Mi</h2>
+      <img src="https://i.pinimg.com/564x/15/da/22/15da2288f7d61bc79eacb78776761e1a.jpg" alt="hello-kitty" srcset="">
+      <p>Soy apasionada por la programación y lo que estás viendo es prueba de ello. <a href="https://github.com/katia-tsx">Sigueme</a></p>
+    </div>
+  </section>
 
-  <p>Escrito por: {frontmatter.author}</p>
-
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
+  <section class="float-left w-1/4 p-1/5">
   <div class="tags">
     {frontmatter.tags.map((tag: string) => (
       <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
     ))}    
   </div>
+</section>
 
-  <slot />
+<slot />
+</main>
 </BaseLayout>
 <style>
   a {
-    color: #00539F;
+    color: #4c1d95;
   }
-
-  .tags {
+  .tags{  
+    width: 25%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: initial;
+    padding: 13%;
+  }
+  .tag {
+    margin: 7px;
+    font-size: 1.15em;
+    text-align: center;
   }
 
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
+  .row::after{
+    content: "";
+    display: table;
+    clear: both;
   }
 </style>

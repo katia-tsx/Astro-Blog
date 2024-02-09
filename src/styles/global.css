@@ -1,12 +1,14 @@
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
+  height: screen;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-body {
+main{
   margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
+  max-width: 105ch;
   padding: 1rem;
   line-height: 1.5;
 }
@@ -15,21 +17,51 @@ body {
   box-sizing: border-box;
 }
 
+.hero{
+  background-image: url(../../public/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
 }
 
 html.dark {
-  background-color: #0d0950;
+  background-color: #1c1c1f;
   color: #fff;
+}
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+  background-color: #4c1d95;
+  text-decoration: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  width: 6%;
+  margin-right: 2%;
+  text-align: right;
+  font-size: 25px;
 }
 
 .dark .nav-links a {
   color: #fff;
 }
 
-/* estilos de la barra de navegación*/
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -43,36 +75,12 @@ html.dark {
   background-color: #ff9776;
 }
 
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover, a:focus {
-  background-color: #ff9776;
-}
-
 .expanded {
   display: unset;
 }
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
     display: block;
     position: static;
     width: auto;
