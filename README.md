@@ -58,13 +58,28 @@ En el directorio `src/pages/`, encontrarás las diferentes páginas de mi blog, 
 
 Mi blog cuenta con una variedad de páginas para explorar:
 
-- **Inicio**: `src/pages/index.astro` - La página principal de mi blog.
-- **Acerca de**: `src/pages/about.astro` - Aquí puedes conocer un poco más sobre mí o sobre el blog.
-- **Blog**: 
-  - `src/pages/blog/index.astro` - Una lista de todas las entradas de mi blog.
-  - `src/pages/blog/[slug].astro` - Detalles de una entrada de blog individual.
-  - `src/pages/blog/tags.astro` - Explora las diferentes etiquetas de las entradas de mi blog.
-- **Etiquetas**: `src/pages/blog/tags.astro` - Una página para explorar todas las etiquetas disponibles en mi blog.
+- **Inicio**  
+  ![Imagen de la página de inicio](/public/inicio.png)  
+  Esta es la página principal de mi blog, donde puedes encontrar contenido destacado y enlaces rápidos a otras secciones.
+
+- **Acerca de**  
+  Obtén más información sobre mí y la historia detrás de este blog.
+
+- **Blog**  
+  ![Imagen de la página del Blog](/public/blog.png) 
+  - **Índice del Blog**: Explora una lista de todas las entradas de mi blog.
+  - **Detalles de la Entrada**: Lee detalles específicos sobre una entrada de blog.
+- **Blog/post[index]** 
+  ![Imagen de la página de post](/public/post.png) 
+
+- **Etiquetas**  
+  ![Imagen de la página de Etiquetas](/public/etiquetas.png)  
+  Explora todas las etiquetas disponibles en mi blog y encuentra contenido relacionado.
+
+  > [!NOTE]  
+  > Para ocultar la barra de herramientas de desarrollo de Astro, ejecuta el siguiente comando en tu terminal:  
+  ```
+  sh astro preferences disable devToolbar
 
 ## 🚀 Comandos Útiles
 
